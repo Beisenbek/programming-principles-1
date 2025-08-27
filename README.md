@@ -20,5 +20,5 @@ No prior programming experience is required.
 
 Here are guides to help you work with the terminal and compile C++ code:
 
-- [Terminal Basics Guide](<terminal basics.md>)  
-- [C++ Compilation Guide](<cpp compile guide.md>)
+- [Terminal Basics Guide](<lab01/terminal basics.md>)  
+- [C++ Compilation Guide](<lab01/cpp compile guide.md>)
