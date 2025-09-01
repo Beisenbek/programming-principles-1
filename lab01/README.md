@@ -37,10 +37,11 @@ g++ hello.cpp
 
 After setting up your environment, go to the online judge system and solve the required problems.
 
-🔗 **Lab 1**: [http://ejudge.kz/new-client?contest_id=101](http://ejudge.kz/new-client?contest_id=101)
+🔗 **Lab 1**: [http://ejudge.kz/new-client?contest_id=1](http://ejudge.kz/new-client?contest_id=1)
 
 📝 **Instructions**:
-- Login with the credentials provided by your instructor
+- Login with the credentials provided by your instructor  
+👉 **[How to login](./lab-login-instructions.md)**
 - Solve and submit the assigned tasks
 - Submit only `.cpp` files that compile and run without errors
 ---
@@ -50,7 +51,7 @@ After setting up your environment, go to the online judge system and solve the r
 To pass this lab:
 
 - ✅ Demonstrate local compilation and execution of a test `.cpp` program
-- ✅ Solve tasks successfully on [ejudge.kz](http://ejudge.kz/new-client?contest_id=101)
+- ✅ Solve tasks successfully on [ejudge.kz](http://ejudge.kz/new-client?contest_id=1)
 
 **Deadline**: check MS Teams announcements
 
