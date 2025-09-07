@@ -24,14 +24,14 @@ After setup, test compilation:
    ```
 4. Run the program:
    ```bash
-   main.exe
+   ./main.exe
    ```
 
 ---
 
 ## 🍏 Mac OS
 
-> ✅ First-time setup may require installing command line tools:
+> ✅ First-time setup may require installing command-line tools:
 ```bash
 xcode-select --install
 ```
