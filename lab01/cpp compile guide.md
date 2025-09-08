@@ -24,9 +24,12 @@ After setup, test compilation:
    ```
 4. Run the program:
    ```bash
+   main.exe
+   ```
+   or, if the above command doesn't work, use:
+   ```bash
    ./main.exe
    ```
-
 ---
 
 ## 🍏 Mac OS
