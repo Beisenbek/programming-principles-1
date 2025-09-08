@@ -2,7 +2,7 @@
 
 ## 1. Objective
 
-This lab helps students better their understanding of the topics of the second lecture: logical operators, boolean variables, control flow, conditional statements and loops.
+This lab helps students practice their skills and better their understanding of the topics of the second lecture: logical operators, logical comparisons, math functions, control flow, conditional statements and loops.
 
 ---
 
