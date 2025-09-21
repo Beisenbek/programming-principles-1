@@ -2,7 +2,7 @@
 
 ## 1. Objective
 
-This lab helps students practice their skills and better their understanding of the topics of the second lecture:  Numeric Systems, Bits and Bitwise Operators.
+This lab helps students practice their skills and better their understanding of the topics of the third lecture:  Numeric Systems, Bits and Bitwise Operators.
 
 ---
 
@@ -49,16 +49,9 @@ Below are compact helper tables and short examples meant to help you during exer
 
 | Concept | Description | Example |
 |---|---:|---|
-| Binary (base 2) | Uses digits 0 and 1. Important for bitwise operations and low-level data representation. | 1310 = 11012 |
-| Octal (base 8) | Uses digits 0–7. Useful historically and sometimes in permission bits. | 158 = 1710 |
-| Decimal (base 10) | Standard human-readable numbering. | 4210 = 42 |
-| Hexadecimal (base 16) | Uses 0–9 and A–F. Compact representation of binary; common in programming and memory dumps. | 25510 = FF16 = 111111112 |
-| Conversion tips | Divide by new base, read remainders bottom-up; or group binary digits (3 bits -> octal, 4 bits -> hex). | 1) 1101112 -> group 4: 0011 0111 -> 3 7 -> 3716? (binary->hex process)
-
-Short conversions:
-
-- Binary -> Hex: group bits into 4 from right: 11010110 -> (1101)(0110) -> D6
-- Binary -> Octal: group bits into 3 from right: 101110 -> (101)(110) -> 5 6 -> 56
+| Binary (base 2) | Uses digits 0 and 1. Important for bitwise operations and low-level data representation. | 13 = 1101 |
+| Octal (base 8) | Uses digits 0–7. Useful historically and sometimes in permission bits. | 15 = 17 |
+| Hexadecimal (base 16) | Uses 0–9 and A–F. Compact representation of binary; common in programming and memory dumps. | 255 = FF = 11111111 |
 
 ### Bits and Bitwise Operators (C/C++ style)
 
@@ -72,19 +65,91 @@ Short conversions:
 | Right shift | >> | Shifts bits right: logical (fills with 0) vs arithmetic (preserves sign). | a >> 1: 1010 >> 1 = 0101 = 5 (logical)
 
 Notes and common patterns:
-
-- Masking: use & with a mask to extract bits. Example: x & 1 extracts LSB.
 - Setting a bit: x |= (1 << n) sets bit n.
 - Clearing a bit: x &= ~(1 << n) clears bit n.
 - Toggling a bit: x ^= (1 << n) flips bit n.
 - Checking bit: (x >> n) & 1 returns bit n (0 or 1).
-
-Small examples:
-
 - Check if even: (x & 1) == 0 -> true if even.
-- Isolate lowest set bit: x & -x (two's complement) -> only lowest 1 remains.
 
-Recommended quick exercises for practice:
-1. Convert 20210 to binary and hex.
-2. Compute (29 & 15), (29 | 15), (29 ^ 15) and show binary steps.
-3. Given x = 0, set bits 0, 3, and 5 using shifts and ORs; show final value in decimal and binary.
+#### Truth tables (bitwise / boolean view)
+
+AND (a & b)
+
+| a | b | a & b |
+|---:|---:|---:|
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
+
+OR (a | b)
+
+| a | b | a | b |
+|---:|---:|---:|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 1 |
+
+XOR (a ^ b)
+
+| a | b | a ^ b |
+|---:|---:|---:|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
+NOT (~a) — unary (bit flip)
+
+| a | ~a |
+|---:|---:|
+| 0 | 1 |
+| 1 | 0 |
+
+### 4-bit examples
+
+Decimal / Binary / Hex (4-bit unsigned range 0..15):
+
+| Dec | Binary | Hex |
+|---:|:---:|:---:|
+| 0  | 0000 | 0 |
+| 1  | 0001 | 1 |
+| 2  | 0010 | 2 |
+| 3  | 0011 | 3 |
+| 4  | 0100 | 4 |
+| 5  | 0101 | 5 |
+| 6  | 0110 | 6 |
+| 7  | 0111 | 7 |
+| 8  | 1000 | 8 |
+| 9  | 1001 | 9 |
+| 10 | 1010 | A |
+| 11 | 1011 | B |
+| 12 | 1100 | C |
+| 13 | 1101 | D |
+| 14 | 1110 | E |
+| 15 | 1111 | F |
+
+Bitwise examples with 4-bit values (show binary steps):
+
+- Let x = 1101 (13), y = 0110 (6)
+	- x & y = 1101 & 0110 = 0100 = 4
+	- x | y = 1101 | 0110 = 1111 = 15
+	- x ^ y = 1101 ^ 0110 = 1011 = 11
+	- ~x (4-bit) = ~1101 = 0010 = 2  (note: in real programs ~ works on full machine width)
+
+Shifts (4-bit visual examples, result may need more bits in practice):
+
+- 0101 (5) << 1 -> 1010 (10)
+- 0101 (5) >> 1 -> 0010 (2)  (logical shift)
+
+Two's complement (4-bit signed range: -8..+7):
+
+| Binary | Unsigned | Signed (two's comp) |
+|:---:|---:|---:|
+| 0000 | 0  | 0  |
+| 0111 | 7  | 7  |
+| 1000 | 8  | -8 |
+| 1111 | 15 | -1 |
+
+Example: 1101 (13 unsigned) interpreted as 4-bit two's complement = -3 (because invert+1: 0011 -> 3 -> negative)
