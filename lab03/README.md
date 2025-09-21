@@ -84,7 +84,7 @@ AND (a & b)
 
 OR (a | b)
 
-| a | b | a | b |
+| a | b | a \| b |
 |---:|---:|---:|
 | 0 | 0 | 0 |
 | 0 | 1 | 1 |
@@ -142,14 +142,3 @@ Shifts (4-bit visual examples, result may need more bits in practice):
 
 - 0101 (5) << 1 -> 1010 (10)
 - 0101 (5) >> 1 -> 0010 (2)  (logical shift)
-
-Two's complement (4-bit signed range: -8..+7):
-
-| Binary | Unsigned | Signed (two's comp) |
-|:---:|---:|---:|
-| 0000 | 0  | 0  |
-| 0111 | 7  | 7  |
-| 1000 | 8  | -8 |
-| 1111 | 15 | -1 |
-
-Example: 1101 (13 unsigned) interpreted as 4-bit two's complement = -3 (because invert+1: 0011 -> 3 -> negative)
