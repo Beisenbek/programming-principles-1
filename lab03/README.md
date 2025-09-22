@@ -58,7 +58,7 @@ Below are compact helper tables and short examples meant to help you during exer
 | Operator | Symbol | Description | Example (a = 10 (10102), b = 6 (01102)) |
 |---:|:---:|---|---|
 | AND | & | Bitwise AND: result bit is 1 if both bits are 1. | a & b = 1010 & 0110 = 0010 = 2 |
-| OR | | | Bitwise OR: result bit is 1 if at least one bit is 1. | a | b = 1010 | 0110 = 1110 = 14 |
+| OR | \| | Bitwise OR: result bit is 1 if at least one bit is 1. | a \| b = 1010 | 0110 = 1110 = 14 |
 | XOR | ^ | Bitwise XOR: result bit is 1 if bits differ. | a ^ b = 1010 ^ 0110 = 1100 = 12 |
 | NOT | ~ | Bitwise NOT: flips all bits (two's complement for signed). | ~a (for 8-bit) = ~00001010 = 11110101 = 245 (or -11 signed)
 | Left shift | << | Shifts bits left, fills with 0: multiplies by 2 per shift (for unsigned). | a << 1: 1010 << 1 = 10100 = 20 |
@@ -142,3 +142,9 @@ Shifts (4-bit visual examples, result may need more bits in practice):
 
 - 0101 (5) << 1 -> 1010 (10)
 - 0101 (5) >> 1 -> 0010 (2)  (logical shift)
+
+### Conversions
+- **From any system to decimal**: Multiply each digit by its base raised to position power.
+- **From decimal to binary**: Divide by 2 repeatedly, read remainders in reverse.
+- **From decimal to octal**: Divide by 8 repeatedly, read remainders in reverse.
+- **From decimal to hex**: Divide by 16 repeatedly, read remainders in reverse.
