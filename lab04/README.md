@@ -83,6 +83,8 @@ for (int i = 0; i < n; ++i) {
 for (int &x : a) x *= 2;    // modifies elements
 for (int x : a) cout << x; // read-only copy
 ```
+Note: on older MinGW versions you may need to enable C++11 when compiling the examples. Use: `g++ sol.cpp -std=c++11`
+
 
 ### Short examples
 
