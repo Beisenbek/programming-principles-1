@@ -81,7 +81,7 @@ for (int i = 0; i < n; ++i) {
 
 ```cpp
 for (int &x : a) x *= 2;    // modifies elements
-for (int x : a) std::cout << x; // read-only copy
+for (int x : a) cout << x; // read-only copy
 ```
 
 ### Short examples
@@ -96,5 +96,5 @@ for (int x : a) sum += x;
 2) Reverse in-place:
 
 ```cpp
-for (int i = 0; i < n/2; ++i) std::swap(a[i], a[n-1-i]);
+for (int i = 0; i < n/2; ++i) swap(a[i], a[n-1-i]);
 ```
