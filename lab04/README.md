@@ -12,7 +12,7 @@ This lab helps students practice their skills and better their understanding of 
 
 Go to the ejudge system and solve the required problems.
 
-🔗 **Lab 3**: [http://ejudge.kz/new-client?contest_id=4](http://ejudge.kz/new-client?contest_id=4)
+🔗 **Lab problems**: [http://ejudge.kz/new-client?contest_id=4](http://ejudge.kz/new-client?contest_id=4)
 
 📝 **Instructions**:
 - Login with your credentials
