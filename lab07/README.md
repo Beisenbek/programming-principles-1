@@ -116,3 +116,18 @@ int main() {
     return 0;
 }
 ```
+
+### Passing 2D arrays
+
+There are several ways to pass 2D arrays to functions in C++. Choose depending on whether sizes are known at compile time, whether you need contiguous storage, and on safety.
+
+1) Fixed columns (classic C-style)
+```cpp
+void f(int a[][4], int rows) {
+    // cols is 4 (compile-time); access: a[i][j]
+}
+int main() {
+    int a[3][4] = { /* ... */ };
+    f(a, 3);
+}
+```
