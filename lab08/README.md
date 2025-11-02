@@ -2,7 +2,6 @@
 
 ## 1. Objective
 
-Vector
 This lab helps students practice their skills and better their understanding of the topics of the lecture# 8: STL: Algorithms, Containers(Vector, Set, Map), Iterators.
 
 ---
