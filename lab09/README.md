@@ -118,7 +118,7 @@ int main() {
 }
 ```
 
-### Adapter customization & tips
+### Tips
 - Use `deque` when you need fast insert/erase at both ends plus random access.
 - Use `queue`/`stack` for clear intent and simplcity.
 ---
