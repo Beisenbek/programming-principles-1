@@ -28,7 +28,7 @@ After setup, test compilation:
    ```
    or, if the above command doesn't work, use:
    ```bash
-   ./main.exe
+   .\main.exe
    ```
 ---
 

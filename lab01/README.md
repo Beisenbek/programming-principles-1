@@ -21,7 +21,7 @@ You must be able to:
 
 ```bash
 g++ hello.cpp
-./a.exe     # On Windows
+.\a.exe     # On Windows
 ./a.out     # On Linux/macOS
 ```
 
